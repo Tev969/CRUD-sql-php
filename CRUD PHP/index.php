@@ -19,21 +19,18 @@ try {
      // 𝘀𝘂𝗶𝘃𝗶𝗲 𝗱𝘂 𝗻𝗼𝗺 𝗹𝗲 𝗽𝗮𝗿𝗮𝗺é𝘁𝗿𝗲 𝗱𝗲 𝗽𝗼𝘀𝘁 𝗱𝗼𝗶𝘁 ê𝘁𝗿𝗲 𝗹𝗲 𝗻𝗮𝗺𝗲 𝗱𝗲 𝗺𝗲𝘀 𝗶𝗻𝗽𝘂𝘁 𝗱𝘂 𝗳𝗼𝗿𝗺𝘂𝗹𝗮𝗶𝗿𝗲 𝗹𝗶é𝗲⁡
 
      if (isset($_POST['modif'])) {
-            
+
           $Nom = htmlspecialchars($_POST['nom']);
           $Prénom = htmlspecialchars($_POST['prenom']);
           $Mail =  htmlspecialchars($_POST['mail']);
           $Password = htmlspecialchars($_POST['password']);
-echo $Nom ;
-echo $Mail;
 
-          if (preg_match('/^[a-zA-Z]+$/', $Nom) && preg_match("/^[a-zA-Z0-9\.\_\-]+@[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,}$/", $Mail) && preg_match('/^[a-zA-Z]+$/', $Prénom) ) { 
-               addUser($db, $Nom, $Prénom, $Mail, $Password); 
-            
-          }
-          else {
+
+          if (preg_match('/^[a-zA-Z]+$/', $Nom) && preg_match("/^[a-zA-Z0-9\.\_\-]+@[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,}$/", $Mail) && preg_match('/^[a-zA-Z]+$/', $Prénom)) {
+               addUser($db, $Nom, $Prénom, $Mail, $Password);
+          } else {
                echo "L'adresse e-mail n'est pas valide.";
-           }
+          }
      }
 
      if (isset($_POST['confirmUpdate'])) {
@@ -148,7 +145,7 @@ $users = $codeSQL->fetchAll(PDO::FETCH_ASSOC);
                          // ⁡
                          foreach ($users as $user) : ?>
                               <tr>
-                                   <?php   ($id = (isset($_POST['update'])) ? $_POST['update'] : null);
+                                   <?php ($id = (isset($_POST['update'])) ? $_POST['update'] : null);
                                    if (isset($_POST['update']) && $id == $user['id']) : ?>
                                         <input type="hidden" name="id" value="<?php echo $user['id'] ?>">
                                         <td><input class="nom" name="nom" value="<?php echo $user['Nom'] ?>" placeholder="Votre nom" type="text"> </td>
@@ -174,16 +171,16 @@ $users = $codeSQL->fetchAll(PDO::FETCH_ASSOC);
 
           </form>
 
-     <!-- ⁡⁢⁢⁢𝗗𝗲𝘂𝘅𝗶𝗲𝗺𝗲 𝗳𝗼𝗿𝗺 𝗽𝗼𝘂𝗿 𝗹𝗮 𝗰𝗿é𝗮𝘁𝗶𝗼𝗻 𝗱'𝘂𝗻 𝘂𝘀𝗲𝗿⁡ -->
-     <div class="create">
-          <form class="add" action="" method="post">
-               <input class="nom" name="nom" placeholder="Votre nom" type="text">
-               <input class="prenom" name="prenom" placeholder="Votre prénom" type="text">
-               <input class="mail" name="mail" placeholder="Votre mail" type="text">
-               <input class="password" name="password" placeholder="Votre mot de passe" type="password">
-               <button class="modifButt" name="modif" type="submit">Create user</button>
-          </form>
-     </div>
+          <!-- ⁡⁢⁢⁢𝗗𝗲𝘂𝘅𝗶𝗲𝗺𝗲 𝗳𝗼𝗿𝗺 𝗽𝗼𝘂𝗿 𝗹𝗮 𝗰𝗿é𝗮𝘁𝗶𝗼𝗻 𝗱'𝘂𝗻 𝘂𝘀𝗲𝗿⁡ -->
+          <div class="create">
+               <form class="add" action="" method="post">
+                    <input class="nom" name="nom" placeholder="Votre nom" type="text">
+                    <input class="prenom" name="prenom" placeholder="Votre prénom" type="text">
+                    <input class="mail" name="mail" placeholder="Votre mail" type="text">
+                    <input class="password" name="password" placeholder="Votre mot de passe" type="password">
+                    <button class="modifButt" name="modif" type="submit">Create user</button>
+               </form>
+          </div>
      </section>
 </body>
 
