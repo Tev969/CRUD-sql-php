@@ -1,0 +1,174 @@
+
+.container {
+
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  padding: 25px;
+  width: 700px;
+  border: 2px solid rgb(4, 67, 135);
+  border-radius: 8px;
+  text-align: center;
+
+}
+
+
+th {
+     font-size: 1.3rem;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+td { 
+     padding-top: 13px;
+     font-size: 1.1rem;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+input:focus-visible {
+     border: 2px solid green;
+border-color: green;
+     outline: none;
+}
+
+.create {
+  display: flex;
+  justify-content: center;
+}
+
+.update {
+background-color: transparent;
+color: rgb(255, 255, 255);
+font-size: 0.9rem;
+border-radius: 6px;
+border: 1px solid rgb(0, 0, 0);
+background-color: rgb(3, 123, 25);
+padding: 3px;
+}
+
+.update:hover {
+     transition: ease-out 0.3s;
+     background-color:rgb(4, 67, 135) ;
+     color: aliceblue;
+     border: none;
+
+}
+
+.deleteButt {
+     width: 34px;
+}
+
+.delete {
+
+     background-color: transparent;
+     color: rgb(255, 255, 255);
+     font-size: 0.9rem;
+     border-radius: 6px;
+     border: 1px solid rgb(0, 0, 0);
+     background-color: rgb(176, 0, 0);
+     padding: 3px;
+     
+}
+
+
+
+.delete:hover {
+     transition: ease-out 0.3s;
+     background-color:rgb(4, 67, 135) ;
+     color: aliceblue;
+     border: none;
+
+}
+
+.nom {
+     background-color: transparent;
+     color: rgb(4, 67, 135);
+     font-size: 0.9rem;
+     border-radius: 6px;
+     border: 0.7px solid  rgb(4, 67, 135) ;
+     text-align: center;
+     
+}
+
+
+
+.prenom {
+     background-color: transparent;
+     color: rgb(4, 67, 135);
+     font-size: 0.9rem;
+     border-radius: 6px;
+     border: none;
+     border: 0.7px solid  rgb(4, 67, 135) ;
+     text-align: center;
+
+}
+
+.mail {
+     background-color: transparent;
+     color: rgb(4, 67, 135);
+     font-size: 0.9rem;
+     border-radius: 6px;
+     border: none;
+     border: 0.7px solid  rgb(4, 67, 135) ;
+     text-align: center;
+}
+
+.password {
+     background-color: transparent;
+     color: rgb(4, 67, 135);
+     font-size: 0.9rem;
+     border-radius: 6px;
+     border: none;
+     border: 0.7px solid  rgb(4, 67, 135) ;
+     text-align: center;
+}
+
+.modifButt {
+     text-align: center;
+     background-color: transparent;
+     color: rgb(4, 67, 135);
+     font-size: 0.9rem;
+     border-radius: 6px;
+     border: 0.7px solid  rgb(4, 67, 135) ;
+     margin-left: 25px;
+     padding: 5px;
+}
+
+.modifButt:hover {
+     transition: ease-out 0.3s;
+     background-color: rgb(3, 123, 25) ;
+     color: aliceblue;
+     border: none;
+
+}
+
+.confirm{
+
+     background-color: transparent;
+     color: rgb(4, 67, 135);
+     font-size: 0.9rem;
+     border-radius: 6px;
+     border: 0.8px solid rgb(4, 67, 135);
+     padding: 3px;
+     
+}
+
+.confirm:hover {
+     transition: ease-out 0.3s;
+     background-color:rgb(4, 67, 135) ;
+     color: aliceblue;
+     border: none;
+
+}
+
+.add {
+     display: flex;
+     justify-content: center;
+     width: 45px;
+     gap: 5px;
+}
